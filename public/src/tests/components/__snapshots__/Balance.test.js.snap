@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pruebas en e componente <Balance/> debuelve el componente contra lo que esta en el sanpshot 1`] = `ShallowWrapper {}`;
