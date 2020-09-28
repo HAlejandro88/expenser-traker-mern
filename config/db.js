@@ -7,8 +7,12 @@ const connectDB = async() => {
             useCreateIndex: true,
             useUnifiedTopology: true
         })
-        console.log(`MondoDB Connected: ${conn.connection.host}`.cyan.underline.bold)
+        console.log(`MondoDB Connected: ${conn.connection.port}`.cyan.underline.bold)
     } catch (error) {
         console.log(`Error: ${err.message}`.red)
+        process.exit(1);
     }
 }
+
+
+module.exports = connectDB;

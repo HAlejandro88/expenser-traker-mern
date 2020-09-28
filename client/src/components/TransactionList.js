@@ -1,10 +1,15 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { GlobalContext } from '../context/GlobalState';
 import { Transaction } from './Transaction';
 
 export const TransactionList = () => {
 
-    const { transactions } = useContext(GlobalContext)
+    // @getTransactions para traer los data de lapeticion donde se vuelve el initialState
+    const { transactions, getTransactions } = useContext(GlobalContext);
+
+    useEffect(() => {
+        getTransactions();
+    }, [])
 
     return (
         <>
